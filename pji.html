@@ -38,72 +38,155 @@
 
 		<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
+			<!-- NOTE : Les slides sont pas finies mais c'est un bon premier jet je pense -->
 			<div class="slides">
 				<section>
 					<h1>Projet Individuel</h1>
-					<h3>Systèmes de détection d'intrusion </br> pour l'Internet des Objets</h3>
+					<h3>Systèmes de détection d'intrusion </br> pour l'Internet des objets</h3>
+					<img src="img/logo_lille1.png" alt="logo_lille1">
+					<img src="img/logo_2xs.png" alt="logo_2xs">
 					<p>
 						<small>Présenté par Théo Plockyn et Rémy Debue</small>
 					</p>
-						<img src="img/logo_lille1.png" alt="logo_lille1">
-						<img src="img/logo_2xs.png" alt="logo_2xs">
+					<aside class="notes">
+						Ne pas passer de temps à expliquer le sujet
+					</aside>
 				</section>
 
 				<section>
 					<h2>Plan de la présentation</h2>
-					<ul>
-						<li> Internet des Objets </li>
-						<li> Problèmes de sécurité </li>
-						<li> Nos apports et leur challenge </li>
+					<p class="fragment"> Contexte général </p>
+					<p class="fragment"> Contexte spécifique </p>
+					<p class="fragment"> Projet et zoom </p>
 				</section>
+
 				<section>
-					<h2> Introduction </h2>
-					<ul>
-						<li> Projet de fin d'année de Master 1 </li>
-						<li> Equipe de recherche 2XS </li>
-						<li> Sujet de la sécurité et réseau </li>
-					</ul>
+					<h2>Introduction</h2>
+					<p> Cadre de nos études </p>
+					<p> Curieux de la sécurité </p>
+					<p> Recherche : équipe 2XS </p>
 				</section>
+
 				<section>
-					<h2> Equipe 2XS </h2>
-					<ul>
-						<li> Encadré par Gilles Grimaud </li>
-						<li> IRCICA </li>
-						<li> Type du projet</li>
-					</ul>
+					<section>
+						<img width="423" height="76"  src="img/logo_ircica.png" alt="Logo ircica">
+						<p><b>I</b>nstitut de <b>r</b>echerche sur les <b>c</b>omposants logiciels et matériels pour l'<b>i</b>nformation et la <b>c</b>ommunication <b>a</b>vancée de Lille</p>
+						<p>Hôtel à projets interdisciplinaires.</p>
+						<p>Recherches centrées sur l'intelligence ambiante.</p>
+						<aside class="notes">
+							PARTIE 1 : Contexte général
+						</aside>
+					</section>
+
+					<section>
+						<h2>Equipe 2XS</h2>
+						<p>eXtra Small eXtra Safe</p>
+						<p>Encadré par Gilles Grimaud</p>
+						<p>Projet sur sécurité des réseaux</p>
+					</section>
 				</section>
+
 				<section>
-					<h2> Dans notre projet</h2>
-					<ul>
-						<li> Bla </li>
-						<li> Bla </li>
-						<li> Bla</li>
-					</ul>
+					<section>
+						<h2>Le sujet</h2>
+						<p>Systèmes de détection d'intrusion </br> pour l'Internet des objets<p>
+						<aside class="notes">
+							PARTIE 2 : Contexte spécifique
+						</aside>
+					</section>
+
+					<section>
+						<h2>Système de détection d'intrusion</h2>
+						<small>Aussi appelé IDS</small>
+						<p>Repérer des activités anormales sur un réseau</p>
+						<p>Connaissance des tentatives d'intrusions réussies comme échouées</p>
+					</section>
+
+					<section>
+						<h2>Internet des objets</h2> <!-- NOTE : Rajouter des images ? -->
+						<small>Aussi appelé IoT</small>
+						<p>Extension d'Internet au monde physique</p>
+						<p>Utilisations diverses et variées</p>
+
+						<aside class="notes">
+							Exemples d'IoT : Santé (fitbit, pacemaker), domotique; Linky, Bibliothèque Universitaire
+						</aside>
+					</section>
 				</section>
+
 				<section>
-					<h2> Problématique de la sécurité</h2>
-					<ul>
-						<li> Peu d'implémentations</li>
-						<li> La contrainte des systèmes embarqués </li>
-						<li> Le coût des installations de surveillance</li>
-					</ul>
+					<h2>La sécurité dans l'IoT</h2>
+					<p>Sécurité réelle faible actuellement</p>
+					<p>Systèmes embarqués contraints</p>
+					<p>Besoin solutions de sécurité adhoc</p>
+
+					<aside class="notes">
+						Sécurité théorique assez bonne, bien débattue dans les RFC, mais entreprises cherchent à faire marcher, pas à rechercher en profondeur
+					</aside>
 				</section>
+
 				<section>
-					<h2> Différents types d'intrusions </h2>
-					<ul>
-						<li> Attaques du parking</li>
-						<li> Autres à définir </li>
-					</ul>
+					<h2>Sécurité : Pourquoi c'est difficile ?</h2>
+					<p>Attaques passives</p>
+					<p>Attaques actives</p>
+
+					<aside class="notes">
+						<p>Passives : écoute, redirection du routage du réseau par un noeud espion</p>
+						<p>Actives : deux grandes sortes :</p>
+						<p>Difficiles à gérer par nous même : Brouillage des ondes, flood de paquets</p>
+						<p>Gérables par nous même : paquets anormaux, usurpation d'identité</p>
+					</aside>
 				</section>
+
 				<section>
-					<h2> Nos apports</h2>
-					<ul>
-						<li> Sondes sniffer</li>
-						<li> Analyse du trafic </li>
-						<li> Autres</li>
-					</ul>
+					<section>
+						<h2>Outils pour IDS</h2>
+						<p>Capter les informations : <span class="fragment">Sonde</span></p>
+						<p>Vérifier les informations : <span class="fragment">Discus</span></p>
+						<aside class="notes">
+							PARTIE 3 : sous partie 1 : Notre projet, produire un outil pour IDS
+						</aside>
+					</section>
+					<section>
+						<h2>Discus</h2>
+						<p>Projet de l'équipe 2XS</p>
+						<p>Framework d'IDS</p>
+						<aside class="notes">
+							Pas passer beaucoup de temps dessus, pas notre projet. Dire que c'est le coeur de l'IDS
+						</aside>
+					</section>
 				</section>
+
+				<section>
+					<section>
+						<h2>Notre sonde</h2>
+						<p>Contiki</p>
+						<p>6LoWPAN</p>
+					</section>
+					<section>
+						<h2>Contiki</h2>
+						<p>Système d'exploitation embarqué</p>
+						<p>Léger et flexible</p>
+						<p>Possède beaucoup de caractéristiques d'OS habituels</p>
+					</section>
+					<section>
+						<h2>6LoWPAN</h2> <!-- NOTE : Rajouter des images ? -->
+						<p>Norme sur les communications en IPv6</p>
+						<p>Orienté vers l'informatique embarquée</p>
+						<p>Augmentation de la charge utile : headers compressés</p>
+					</section>
+				</section>
+
+				<!-- TODO : Pas fini du tout à partir d'ici -->
+
+				<section>
+					<h2>Zoom sur une partie</h2>
+					<h3>Traitement des paquets</h3>
+					<p>Différence entre paquets entrants et sortants</p>
+					<p>Parsing des paquets</p>
+					<p> ? </p>
+				</section>
+
 				<section>
 					<h1> Conclusion </h1>
 				</section>
@@ -112,9 +195,9 @@
 					<h2> Des questions ? </h2>
 				</section>
 
-<!-- Exemples de code utile ! -->
+<!-- Exemples de code utile !
 
-				<!-- Example of nested vertical slides -->
+				<!-- Example of nested vertical slides --
 				<section>
 					<section>
 						<h2>Vertical Slides</h2>
@@ -197,7 +280,7 @@
 					<h2>Themes</h2>
 					<p>
 						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. --
 						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
 						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
 						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
@@ -310,7 +393,7 @@ function linkify( selector ) {
 						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
 					</p>
 				</section>
-
+					-->
 			</div>
 
 		</div>
@@ -339,6 +422,7 @@ function linkify( selector ) {
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+			Reveal.configure({ slideNumber: 'c/t' });
 
 		</script>
 
