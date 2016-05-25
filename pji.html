@@ -38,8 +38,7 @@
 
 		<div class="reveal">
 
-			<!-- NOTE : Les slides sont pas finies mais c'est un bon premier jet je pense -->
-			<!-- Tu vas voir ce que c'est un premier jet -->
+			<!-- NOTE : On est bons j'pense -->
 			<div class="slides">
 				<section>
 					<h1>Projet Individuel</h1>
@@ -180,38 +179,51 @@
 						<p>Norme sur les communications en IPv6</p>
 						<p>Orienté vers l'informatique embarquée</p>
 						<p>Augmentation de la charge utile : headers compressés</p>
+						<aside class="notes">
+							Charge utile : trame UDP IPv6 de 33 à 70 octets de data utile
+						</aside>
 					</section>
 				</section>
 
-				<!-- TODO : Pas fini du tout à partir d'ici -->
 				<section>
 					<section>
-						<h2>Zoom sur une partie</h2>
-						<h3>Traitement des paquets</h3>
+						<h2>Traitement des paquets dans Contiki</h2>
 						<p>Différence entre paquets entrants et sortants</p>
 						<p>Parsing des paquets</p>
+						<aside class="notes">
+							PARTIE 3 : sous partie 1 : Zoom sur une partie technique du projet
+						</aside>
 					</section>
 					<section>
-					<h3> Traitement des paquets </h3>
-					<p> a préciser </p>
+						<h3>Différence entre paquets sortants ...</h3>
+						<img src="img/outbound_packet.png" alt="6lowpan_out">
+						<aside class="notes">
+							Logique : On a un buffer header un buffer data, donc c'est séparé
+						</aside>
 					</section>
 					<section>
-						<h3>Différence entre paquets entrants ..</h3>
-						<img src="img/inbound_packet.png" alt="6lowpan">
+						<h3>et entrants</h3>
+						<img src="img/inbound_packet.png" alt="6lowpan_in">
+						<aside class="notes">
+							Surprise : Le paquet n'est pas parsé, donc tout est dans le buffer data
+						</aside>
 					</section>
 					<section>
-						<h3>et sortant</h3>
-						<img src="img/outbound_packet.png" alt="6lowpan">
+					<h3>Traitement des paquets</h3>
+					<p>Tri des paquets</p>
+					<img src="img/parsing.png" alt="parsing des paquets">
 					</section>
 				</section>
+
 				<section>
 					<h1> Conclusion </h1>
 				</section>
+
 				<section>
 					<h1> Merci de votre attention</h1>
 					<h2> Des questions ? </h2>
 				</section>
-				
+
 
 <!-- Exemples de code utile !
 
